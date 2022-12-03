@@ -106,17 +106,17 @@ pub fn day_2(input: &str) {
         score += outcome + move_bonus;
 
         // part 2
-        let part2_player = opponent.clone();
         match expected_result {
             'X' => {
-                // must lose, so add the players weakness
-                part2_score += part2_player.weakness().to_i32();
+                // double negative sort of thing:
+                // get what would win, then get its weakness
+                part2_score += opponent.weakness().weakness().to_i32();
             }
             'Y' => {
-                part2_score += part2_player.to_i32() + 3;
+                part2_score += opponent.to_i32() + 3;
             }
             'Z' => {
-                part2_score += part2_player.to_i32() + 6;
+                part2_score += opponent.weakness().to_i32() + 6;
             }
             _ => {}
         }
