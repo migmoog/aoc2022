@@ -1,11 +1,14 @@
 mod day2;
+mod day3;
 
 use std::env::consts::OS;
 use day2::day_2;
+use crate::day3::day_3;
 
 fn main() {
     day_1(include_str!("day1.txt"));
     day_2(include_str!("day2.txt"));
+    day_3(include_str!("day3.txt"));
 }
 
 fn day_1(input: &str) {
