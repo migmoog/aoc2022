@@ -36,14 +36,13 @@ pub fn day_5(input: &str) {
             if !c.is_alphabetic() { continue; }
 
             stacks[{
-                let mut stack_idx = 0;
-                for j in 0..labels_positions.len() {
+                let mut j = 0;
+                loop {
                     if labels_positions[j] == i {
-                        stack_idx = j;
-                        break;
+                        break j;
                     }
+                    j += 1;
                 }
-                stack_idx
             }].push(c);
         }
     }
