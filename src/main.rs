@@ -3,6 +3,8 @@ mod day3;
 mod day4;
 mod day5;
 mod day6;
+mod day7;
+mod day8;
 
 use std::env::consts::OS;
 use day2::day_2;
@@ -10,6 +12,8 @@ use crate::day3::day_3;
 use day4::day_4;
 use crate::day5::day_5;
 use crate::day6::day_6;
+use crate::day7::day_7;
+use crate::day8::day_8;
 
 fn main() {
     day_1(include_str!("day1.txt"));
@@ -18,6 +22,8 @@ fn main() {
     day_4(include_str!("day4.txt"));
     day_5(include_str!("day5.txt"));
     day_6(include_str!("day6.txt"));
+    day_7(include_str!("day7.txt"));
+    day_8(include_str!("day8.txt"));
 }
 
 fn day_1(input: &str) {
